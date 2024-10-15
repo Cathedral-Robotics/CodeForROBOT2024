@@ -1,1 +1,43 @@
-NEW CODE
+class Robot {
+    int x, y;
+
+    // Constructor to initialize robot's position
+    public Robot(int startX, int startY) {
+        x = startX;
+        y = startY;
+    }
+
+    // Method to move the robot up
+    public void moveUp() {
+        y++;
+        System.out.println("Moved up to (" + x + ", " + y + ")");
+    }
+
+    // Method to move the robot down
+    public void moveDown() {
+        y--;
+        System.out.println("Moved down to (" + x + ", " + y + ")");
+    }
+
+    // Method to move the robot left
+    public void moveLeft() {
+        x--;
+        System.out.println("Moved left to (" + x + ", " + y + ")");
+    }
+
+    // Method to move the robot right
+    public void moveRight() {
+        x++;
+        System.out.println("Moved right to (" + x + ", " + y + ")");
+    }
+
+    public static void main(String[] args) {
+        Robot myRobot = new Robot(0, 0);
+
+        // Moving the robot in all four directions
+        myRobot.moveUp();
+        myRobot.moveRight();
+        myRobot.moveDown();
+        myRobot.moveLeft();
+    }
+}
